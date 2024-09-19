@@ -1,0 +1,115 @@
+/* Scope styles to .list-view-container to prevent conflicts with other views */
+.list-view-container {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.list-view-item {
+    display: table-row;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.list-view-item h3 {
+    display: table-cell;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.list-view-item .status {
+    display: table-cell;
+    padding: 20px;
+    width: 100px;
+    font-size: 16px;
+    text-align: left;
+}
+
+.list-view-item .email {
+    display: table-cell;
+    padding: 10px;
+    font-size: 14px;
+    text-align: left;
+    color: #555;
+}
+
+.list-view-item .tags {
+    display: table-cell;
+    padding: 10px;
+    text-align: left;
+}
+
+.list-view-item .dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Green and red dot for status */
+.list-view-item .green {
+    background-color: #4CAF50;
+}
+
+.list-view-item .red {
+    background-color: #f44336;
+}
+
+/* Buttons container for Edit and Delete */
+.list-view-item .list-view-button-container {
+    display: table-cell;
+    padding: 10px;
+    text-align: center;
+}
+
+.list-view-item .list-edit-button,
+.list-view-item .list-delete-button {
+    padding: 8px 16px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Edit button */
+.list-view-item .list-edit-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Delete button */
+.list-view-item .list-delete-button {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Add hover effects to buttons */
+.list-view-item .list-edit-button:hover {
+    background-color: #45a049;
+}
+
+.list-view-item .list-delete-button:hover {
+    background-color: #e53935;
+}
+
+/* Responsive: Adjust padding and margins on smaller screens */
+@media (max-width: 768px) {
+    .list-view-container {
+        display: block;
+    }
+    .list-view-item {
+        display: block;
+        margin-bottom: 20px;
+    }
+    .list-view-item h3, .list-view-item .status, .list-view-item .email, 
+    .list-view-item .tags, .list-view-item .list-view-button-container {
+        display: block;
+        padding: 5px;
+    }
+}

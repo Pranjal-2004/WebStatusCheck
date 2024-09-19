@@ -1,0 +1,225 @@
+/* Existing styles... */
+
+h1 {
+  text-align: center;
+}
+
+/* General container for the entire App */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #d9edeb; /* Matches the color in the image */
+  border-radius: 10px;
+  width: 90%;
+  padding: 20px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+/* Left box for the form */
+.left-box {
+  width: 100%;
+  height: fit-content;
+  background-color: #89dad0;
+  padding: 30px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+/* Form heading */
+.form-heading {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form input::placeholder {
+  color: #777;
+}
+
+form button {
+  padding: 10px;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #444;
+}
+
+/* Divider between left and right box */
+.divider {
+  width: 5px;
+  background-color: transparent;
+}
+
+/* Right box for website status cards */
+.right-box {
+  width: 100%;
+  background-color: #89dad0;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.right-box .website-card {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  width: 100%; /* Full width on smaller screens */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Status section inside the right box */
+.right-box .status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Buttons in the right box */
+.right-box .all-button, .right-box .list-view-button {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.right-box .all-button:hover, .right-box .list-view-button:hover {
+  background-color: #ccc;
+}
+
+/* Center the database connection status message */
+p {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.heading-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.heading-container h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  text-align: left;
+}
+
+.tag-filter {
+  padding: 8px 12px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.toggle-view-button {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.tag-filter:hover, .toggle-view-button:hover {
+  background-color: #e0e0e0;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+}
+
+/* New Styles for Interval Input */
+.interval-input {
+  margin-top: 40px; /* Adds gap between form and the interval input */
+}
+
+.interval-input label {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.2em; /* Slightly bigger font size */
+  font-weight: bold; /* Bold text */
+  display: block;
+  margin-bottom: 10px; /* Adds some spacing below the label */
+  text-align: left; /* Left align the label */
+}
+
+.interval-input input {
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Make the input field take the full width */
+}
+
+/* Responsive for larger screens */
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .left-box {
+    width: 30%;
+  }
+
+  .right-box {
+    width: 65%;
+  }
+
+  .right-box .website-card {
+    width: 48%;
+  }
+}
+
+/* Further layout tweaks for extra large screens */
+@media (min-width: 1200px) {
+  .container {
+    width: 85%;
+  }
+
+  .right-box .website-card {
+    width: 32%;
+  }
+}

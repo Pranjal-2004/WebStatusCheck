@@ -1,0 +1,91 @@
+.grid-view-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column by default */
+    gap: 50px;
+}
+
+.grid-view-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .grid-view-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+
+    .grid-view-item {
+        width: 300px;
+    }
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    width: 40px;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+    display: inline-block;
+    visibility: visible; 
+}
+
+/* Status-specific colors */
+.green {
+    background-color: #4CAF50;
+}
+
+.red {
+    background-color: #f44336;
+    visibility: visible;
+}
+
+/* Grid View Buttons */
+.grid-view-button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.grid-edit-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+.grid-delete-button {
+    background-color: #f44336;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+/* Tags styling with oval grey background */
+.tags {
+    margin-top: 10px;
+}
+
+.tags span {
+    display: inline-block;
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-right: 5px;
+    font-size: 14px;
+}
